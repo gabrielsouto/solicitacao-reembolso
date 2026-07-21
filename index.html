@@ -6,9 +6,14 @@
   <title>Gerador de Solicitação de Reembolso</title><link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<main>
+<aside class="sidebar" aria-label="Navegação da ferramenta">
+  <a class="sidebar-brand" href="#inicio"><strong>Reembolso</strong><span>Gerador de solicitação</span></a>
+  <nav class="sidebar-nav"><a href="#inicio">Início</a><a href="#ferramenta">Gerar solicitação</a><a href="#fontes">Fontes</a></nav>
+  <p class="sidebar-note">Privacidade: os dados preenchidos ficam somente neste navegador.</p>
+</aside>
+<main id="inicio" class="page-shell">
   <header><span class="tag">GERADOR • CONSUMO</span><h1>Solicitação de reembolso</h1><p>Organize os fatos e gere uma mensagem objetiva para enviar ao fornecedor.</p></header>
-  <section class="card">
+  <section id="ferramenta" class="card">
     <form id="form">
       <label>Seu nome<input id="nome" required placeholder="Nome completo"></label>
       <label>Fornecedor<input id="fornecedor" required placeholder="Loja ou prestador"></label>
@@ -22,7 +27,14 @@
   </section>
   <section id="resultado" class="card output" hidden><div class="output-head"><h2>Rascunho</h2><button id="copiar" class="secondary">Copiar</button></div><pre id="texto"></pre></section>
   <aside><strong>Antes de enviar:</strong> confira a política aplicável, anexe comprovantes e guarde protocolos. O prazo de 7 dias do art. 49 do CDC se refere a contratações fora do estabelecimento comercial; outras situações dependem dos fatos. Esta ferramenta não presta aconselhamento jurídico.</aside>
-  <footer>Fontes oficiais: <a href="https://www.planalto.gov.br/ccivil_03/leis/l8078compilado.htm" target="_blank" rel="noopener">Código de Defesa do Consumidor — Planalto</a> · <a href="https://consumidor.gov.br/" target="_blank" rel="noopener">Consumidor.gov.br</a> · <a href="https://procon.es.gov.br/compra-pela-internet-2" target="_blank" rel="noopener">Procon-ES: compra pela internet</a></footer>
+  <footer id="fontes">Fontes oficiais: <a href="https://www.planalto.gov.br/ccivil_03/leis/l8078compilado.htm" target="_blank" rel="noopener">Código de Defesa do Consumidor — Planalto</a> · <a href="https://consumidor.gov.br/" target="_blank" rel="noopener">Consumidor.gov.br</a> · <a href="https://procon.es.gov.br/compra-pela-internet-2" target="_blank" rel="noopener">Procon-ES: compra pela internet</a></footer>
+  <footer class="fabrica-credit">
+    <p>Este site faz parte da <a href="https://gbrl.com.br/">Fábrica / 1000</a>, um projeto de 1.000 sites.</p>
+    <nav aria-label="Redes sociais">
+      <a href="https://www.linkedin.com/in/soutogabriel/" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://youtube.com/gabrielsouto" target="_blank" rel="noopener">YouTube</a>
+      <a href="https://github.com/gabrielsouto" target="_blank" rel="noopener">GitHub</a>
+    </nav>
+  </footer>
 </main><script src="app.js"></script>
 </body></html>
-
