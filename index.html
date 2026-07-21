@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Gere um rascunho de solicitação de reembolso com os dados da compra.">
+  <title>Gerador de Solicitação de Reembolso</title><link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<main>
+  <header><span class="tag">GERADOR • CONSUMO</span><h1>Solicitação de reembolso</h1><p>Organize os fatos e gere uma mensagem objetiva para enviar ao fornecedor.</p></header>
+  <section class="card">
+    <form id="form">
+      <label>Seu nome<input id="nome" required placeholder="Nome completo"></label>
+      <label>Fornecedor<input id="fornecedor" required placeholder="Loja ou prestador"></label>
+      <div class="grid"><label>Número do pedido<input id="pedido" required placeholder="Ex.: 12345"></label><label>Data da compra<input id="data" required type="date"></label></div>
+      <div class="grid"><label>Produto ou serviço<input id="item" required></label><label>Valor pago (R$)<input id="valor" required inputmode="decimal" placeholder="199,90"></label></div>
+      <label>Motivo<select id="motivo"><option>Direito de arrependimento em compra fora do estabelecimento</option><option>Produto não entregue</option><option>Produto ou serviço com problema</option><option>Cobrança indevida</option><option>Cancelamento acordado</option><option>Outro motivo</option></select></label>
+      <label>Resumo dos fatos<textarea id="fatos" required rows="4" placeholder="Explique datas, contatos anteriores e o que ocorreu."></textarea></label>
+      <label>Forma de pagamento<input id="pagamento" required placeholder="Ex.: cartão de crédito"></label>
+      <button type="submit">Gerar solicitação</button>
+    </form>
+  </section>
+  <section id="resultado" class="card output" hidden><div class="output-head"><h2>Rascunho</h2><button id="copiar" class="secondary">Copiar</button></div><pre id="texto"></pre></section>
+  <aside><strong>Antes de enviar:</strong> confira a política aplicável, anexe comprovantes e guarde protocolos. O prazo de 7 dias do art. 49 do CDC se refere a contratações fora do estabelecimento comercial; outras situações dependem dos fatos. Esta ferramenta não presta aconselhamento jurídico.</aside>
+  <footer>Fontes oficiais: <a href="https://www.planalto.gov.br/ccivil_03/leis/l8078compilado.htm" target="_blank" rel="noopener">Código de Defesa do Consumidor — Planalto</a> · <a href="https://consumidor.gov.br/" target="_blank" rel="noopener">Consumidor.gov.br</a> · <a href="https://procon.es.gov.br/compra-pela-internet-2" target="_blank" rel="noopener">Procon-ES: compra pela internet</a></footer>
+</main><script src="app.js"></script>
+</body></html>
+
